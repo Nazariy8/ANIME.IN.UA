@@ -24,7 +24,8 @@ body{
     background-color: transparent;
     border-radius: 20px;
     border: 2px solid #fff;
-    backdrop-filter: blur(20px);
+    box-shadow: darkorchid 0px 3px 50px inset;
+    backdrop-filter: blur(50px);
     width: 90%;
     margin: auto;
     margin-top: 20px;
@@ -36,14 +37,13 @@ body{
     background: transparent;
     color:#fff;
     border-bottom: 2px solid rgba(255, 255, 255, .2);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(50px);
     font-size: 20px;
     margin-bottom: 50px;
 }
 .logo h1 a {
     text-decoration: none;
     color: #fff;
-    
 }
 div {
     padding: 13px 30px;
@@ -77,13 +77,23 @@ div {
     color:#fff;
     margin-top:1px ;
     width: 300px;
-    height: 30px;
+    height: 40px;
     font-size: 20px;
     background: transparent;
     outline: none;
     border: none;
+    border-top: 2px solid white;
     border-bottom: 2px solid white;
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    transition: 0.5s ease;
+    margin-right: 10px;
+    border-radius: 20px;
+    padding-left: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.search input:hover{
+    box-shadow: white 0px 3px 10px 0px;
 }
 .search a{
     font-weight: 600;
@@ -95,6 +105,88 @@ div {
 }
 .search {
     padding-top: 15px ;
+}
+
+
+/* js discription open */
+
+.js-jujutsu{
+    background:linear-gradient(to right, #0E21A0, purple);
+}
+
+.js-naruto{
+    background:linear-gradient(to right, #000000, #B8621B);
+}
+.js-black-clover{
+    background:linear-gradient(to left, #B31312, #191D88, #2B2A4C );
+}
+.discription{
+    border: 2px solid white;
+    border-radius: 10px;
+    padding:0;
+    width: 560px;
+    margin: 0 auto;
+    display: none;
+    margin-top: 20px;
+    position: absolute;
+    padding-top: 10px;
+    top:-15px;
+    overflow: hidden;
+}
+.main-look.active .discription {
+    display:block;
+    box-shadow: #000000 0px 0px 20px 2px;
+}
+.main-look.active img{
+    scale:0.5;
+    margin-top:60px;
+    border: 2px solid #000000;
+}
+
+.anime-list-con-2 .main-look.active .discription{
+    top:-2px;
+}
+.main-look.active h3{
+    margin-top:-60px ;
+}
+
+/* .main-look.active h3  {
+    display:inline;
+} */
+.text{
+    color: #fff;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.rating, .years, .text{
+    margin-top: -15px;
+}
+.rating{
+    color:greenyellow;
+    display: flex;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+    margin-right: 0;
+}
+.years{
+    color: #fff;
+    margin-top: -25px;
+    padding: 0;
+}
+/* span{
+    text-align: justify;
+    align-items: center;
+} */
+
+.times{
+    font-weight: bold;
+    display: inline-flex;
+}
+.rate-and-year{
+    display: flex;
+    padding-bottom:0px ;
 }
 
 
@@ -112,11 +204,50 @@ div {
     margin: auto;
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(50px);
     border-radius: 10px;
     margin-bottom: 30px;
 }
 
+/* button */
+
+.button{
+    display: flex;
+    border: none;
+    width: 560px;
+    height:60px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    
+}
+button{
+    border: none;
+    background:none;
+    font-size: 30px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+.button:hover{
+    scale: 1.1;
+    /* transform: translateY(-10px); */
+    background: linear-gradient(to left, orange, pink);
+    box-shadow: #fff 0px 0px 2px 4px;
+    color: #fff;
+    cursor: pointer;
+}
+.button:hover button{
+    cursor: pointer;
+    color: #fff;
+}
+.bx-play{
+    font-size: 50px;
+    justify-content: center;
+    padding-top: 2px;
+}
+
+/* button */
 .arrow-down{
     background: fixed;
     justify-content: center;
@@ -132,13 +263,9 @@ div {
 .arrow-down i{
     font-size: 50px;
     color: #fff;
-    text-align: center;
-    margin: auto;
-    padding-left: 35px;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    transform: translate(35px);
+    top: 50%;
+    left: 50%;
 }
 
 /*--- anime list container ---*/
@@ -149,41 +276,56 @@ div {
     scale:0.8;
     align-items: center;
     justify-content: center;
-    margin: auto;
+    gap:0px;
+    padding: 0;
+    margin: 0 auto;
     margin-bottom: -20px;
 }
+
 .anime-list-container img{
     width: 500px;
     height: 300px;
-    transition: 0.5s;
     border: 1px solid black;
+    border-radius:20px;
+}
+div img{
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.anime-list-1, .anime-list-2, .anime-list-3{
+    margin: 0;
+    padding: 0;
+}
+.anime-1-1, .anime-1-2, .anime-1-3{
+    margin: 0;
+    padding: 0;
+}
+.anime-2-1, .anime-2-2,.anime-2-3{
+    margin: 0;
+    padding: 0;
 }
 .row{
     height: 400px;
     background:#fff;
     border-radius: 10px;
     transition: 0.5s;
+    margin-bottom: 30px;
 }
 .row p{
     text-align: center;
     transition: 0.5s;
 }
-.row:hover p{
-    color: #fff;
-}
 .row:hover{
-    background:rgba(226, 0, 0,0.7);
     border-radius: 10px;
-    border: 1px solid #fff;
-    scale: 1.2;
+    box-shadow: rgb(119, 0, 255) 0px 20px 30px -10px;
     cursor: pointer;
+    scale: 1.12;
+    /* transform: translateY(-10px); */
 }
-.row:hover h3{
-    color: #fff;
-}
-.row:hover img{
-    border: 1px solid #fff;
-}
+
 .anime-list-1 h3{
     text-align: center;
     color: #000000;
@@ -208,7 +350,9 @@ div {
     border: 2px solid #fff;
     margin: 0 auto;
     border-radius: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    margin-top: -40px;
+
 }
 
 
@@ -227,10 +371,28 @@ div {
     margin-bottom: -20px;
 }
 .anime-list-con-2 img{
+    align-items: center;
+    justify-content: center;
+    margin: auto;
     width: 500px;
     height: 300px;
-    transition: 0.5s;
     border: 1px solid black;
+    border-radius:20px;
+}
+.js-onepiece{
+    background:linear-gradient(to left, #793FDF, #7091F5, #97FFF4  );
+}
+.js-deathnote{
+    background:linear-gradient(to right, black, #952323 );
+}
+.js-attacktitans{
+    background:linear-gradient(to right, #2E4374, #EE9322);
+}
+.death-text{
+    margin-top: -5px;
+}
+.reveng-text{
+    margin-top: -5px;
 }
 .anime-1-1 h3{
     text-align: center;
@@ -262,18 +424,19 @@ div {
     justify-content: center;
     margin: auto;
     margin-top: -50px;
+    padding: 0;
 }
 .anime-list-con-3 img{
     width: 500px;
     height: 300px;
-    transition: 0.5s;
     border: 1px solid black;
+    border-radius:20px;
 }
 .anime-2-1 h3{
     text-align: center;
     color: #000000;
     font-weight: 600;
-    margin-bottom:5px ;
+   
 }
 .anime-2-2 h3{
     color: #000000;
@@ -285,12 +448,53 @@ div {
     color: #000000;
     text-align: center;
     font-weight: 600;
-    margin-bottom:5px ;
+    
 }
-
-
-
-
+.js-berserk{
+    background: linear-gradient(to right,black, #5B0888, #952323);
+}
+.js-tokyorev{
+    background: linear-gradient(to right,black,grey);
+}
+.js-tokyoghoul{
+    background: linear-gradient(to right,#191D88, #952323,grey);
+}
+/* anime-list-con 4 */
+.anime-list-con-4{
+    display: flex;
+    width: 80%;
+    scale:0.8;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: -50px;
+    padding: 0;
+}
+.anime-list-con-4 img{
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius:20px;
+}
+.avatar-text{
+    margin-top: -5px;
+}
+.hunter-text{
+    margin-top: -5px;
+}
+.js-heroicacademy{
+    background: linear-gradient(to right, #E9B824, #EE9322, #F94C10, #C70039);
+}
+.js-hunter{
+    background: linear-gradient(to right,#952323, green,#191D88  );
+}
+.hunterpadd{
+    padding-right: 30px;
+    
+}
+.js-volley{
+    background: linear-gradient(to right, #213555,#FF9B50, #FD8D14);
+}
 /*--- footer ---*/
 
 
@@ -304,6 +508,7 @@ div {
     backdrop-filter: blur(10px);
     color: #fff;
     font-weight: 600;
+    box-shadow: darkorchid 0px 0px 30px inset;
 }
 .footer p{
     text-align: center;
@@ -315,6 +520,20 @@ div {
 .sources-center{
     text-align: center;
 }
-.instagram{
-    color: rgb(255, 255, 255);
+.footer i{
+    color: yellow;
+    padding: 0px 0px 0 15px;
+
+}
+.footer i:hover{
+    animation: hue-rotating 2s linear infinite;
+}
+
+@keyframes hue-rotating{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
 }
