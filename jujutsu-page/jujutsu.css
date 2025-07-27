@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+::selection{
+    color:yellow;
+    background-color: blue;
+}
+body{   
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(jujutsukaisen.jpg) fixed;
+
+    backdrop-filter: saturate(0%);
+    background-size:cover;
+    background-position: center;
+}
+.menu{
+    display: flex;
+    width: 100%;
+    height:80px;
+    background: transparent;
+    color:#fff;
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(5px);
+    font-size: 20px;
+
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+.menu div{
+    padding: 13px 30px;
+}
+.logo h1 a {
+    text-decoration: none;
+    color: #fff;
+    
+}
+/* div {
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+} */
+.user a{
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+.user p {
+    font-weight: 600;
+}
+.user i {
+    padding: 0 2px 0 0;
+}
+.home a{
+    color:#fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.home i {
+    padding: 0 2px 0 0;
+}
+.home a:hover{
+    color:#fff;
+}
+.search input{
+    color:#fff;
+    margin-top:1px ;
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    transition: 0.5s ease;
+    margin-right: 10px;
+    border-radius: 20px;
+    padding-left: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.search input:hover{
+    box-shadow: white 0px 3px 10px 0px;
+}
+.search a{
+    font-weight: 600;
+}
+
+.search {
+    display: flex;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+/* повернутися назад кнопка */
+
+
+.come-back{
+    background-color: #fff;
+    width: 320px;
+    height: 50px;
+    position: absolute;
+    top: 12%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    box-shadow: white 0px 0px 15px;
+
+}
+.come-back a{
+    text-decoration: none;
+    color: black;
+    justify-content: center;
+}
+.arrow{
+    padding-right: 5px;
+    padding-top: 1px;
+}
+.come-back-content{
+    padding-top: 5%;
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+}
+
+
+
+/* button */
+.button{
+    display: flex;
+    border: none;
+    width: 500px;
+    height:60px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    padding: 0;
+    margin-right:20px;
+
+
+
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+button{
+    border: none;
+    background:none;
+    font-size: 30px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+.button:hover{
+    scale: 1.05;
+    /* transform: translateY(-10px); */
+    background: linear-gradient(to left,#002B5B, #1A5F7A,#159895, #57C5B6);
+    box-shadow: #fff 0px 0px 2px 4px;
+    color: #fff;
+    cursor: pointer;
+}
+.button:hover button{
+    cursor: pointer;
+    color: #fff;
+}
+.bx-play{
+    font-size: 50px;
+    justify-content: center;
+    padding-top: 2px;
+    color: black;
+    transition: 0.3s ease; 
+}
+.button:hover .bx-play{
+    color: #fff;
+}
+.sidebar-maincontent a{
+    text-decoration: none;
+}
+/* section jujutsu */
+
+.sidebar-section{
+    background:linear-gradient(to top, #4090D5, #3454A6, #1E3265);
+    border-radius: 20px;
+    min-height: 65vh;
+    position: relative;
+}
+.sidebar-section img{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 10px;
+}
+.sidebar-maincontent, .frontbar-maincontent{
+    margin: 0px 20px 0px 20px;
+    padding-top: 20px;
+}
+.info{
+    font-size:25px;
+    color: #fff;
+    padding-top: 10px;
+}
+.years{
+    display: flex;
+}
+.times{
+    padding-left: 10px;
+}
+.author{
+    color: #8BE8E5;
+    font-weight: 600;
+    font-size: 30px;
+}
+.rating{
+    text-align: center;
+}
+.rating i{
+    color:#1E3265;
+    font-size:35px;
+    text-align: center;
+    margin: 15px 0 15px 0;
+    transition: 0.5s;
+}
+.rating i:hover {
+    color:#8BE8E5;
+}
+
+/* frontbar-section  */
+.frontbar-section{
+    margin-left: 40%;
+    top: 15.8%;
+    position: absolute;
+    background:linear-gradient(to bottom, #3A1078, #4E31AA, #2F58CD);
+    width: 50%;
+    min-width: 50%;
+    min-height: 64.6vh;
+    border-radius: 20px
+}
+.frontbar-maincontent img{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.frontbar-maincontent h1{
+    color: #B6EADA;
+}
+.discript{
+    padding-bottom: 10px;
+    font-size: 18px;
+    color:#57C5B6;
+    font-weight: bold;
+}
+.history{
+    text-align: justify;
+    font-weight: bold;
+    color:darkturquoise;
+}
+.korotko, .korotko-2{
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.itadori{
+    margin-left: 10px;
+    border-radius: 10px;
+}
+.megumi{
+    margin-top: 40px;
+    margin-right: 10px;
+    border-radius: 10px;
+    width: 450px;
+    height: 190px;
+}
+center{
+    color: white;
+    margin: 0 auto;
+    margin-top: 5px;
+    max-width: 20%;
+    background-color: #3A1078;
+    box-shadow:  #071952 0px 0px 10px 5px ;
+    border-radius: 5px;
+    padding: 10px;
+}
+center a{
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.frontbar-footer-section{
+    padding-top: 40px;
+}
+
+/* footer page */
+
+.footer{
+    background-color: transparent;
+    height: 150px;
+    width: 100%;
+    margin-top: 50px;
+    border-bottom: 2px  solid rgb(255, 255, 255);
+    border-top: 2px  solid rgb(255, 255, 255);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    font-weight: 600;
+    
+}
+.footer p{
+    text-align: center;
+    font-size: 25px;
+}
+.links {
+    display: inline-block;
+    font-size: 40px;
+}
+.sources-center{
+    text-align: center;
+}
+.footer div {
+    padding: 13px 30px;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+.footer i{
+    color: yellow;
+    scale: 2;
+    padding: 0px 15px 0 15px;
+
+}
+.footer i:hover{
+    animation: hue-rotating 2s linear infinite;
+}
+
+@keyframes hue-rotating{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}

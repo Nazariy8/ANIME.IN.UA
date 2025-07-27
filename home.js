@@ -5,7 +5,7 @@ accordionItems.forEach(item =>{
     const content = item.querySelector('.discription');
 
         button.addEventListener('mouseover', () => {
-        item.classList.toggle('active');
+        item.classList.add('active');
     })
 
     button.addEventListener('mouseout', () => {
